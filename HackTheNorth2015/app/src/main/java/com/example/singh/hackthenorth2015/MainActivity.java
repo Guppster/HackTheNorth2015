@@ -4,7 +4,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 
 public class MainActivity extends ActionBarActivity
 {
@@ -31,5 +34,14 @@ public class MainActivity extends ActionBarActivity
     public void facebookClicked(View v)
     {
         ref.child("text").push().setValue("FACEBOOK BUTTON TOTALLY WORKS");
+        ref.child("message").addValueEventListener(new ValueEventListener()
+        {
+            @Override
+            public void onDataChange(DataSnapshot snapshot)
+            {
+                System.out.println("WOAHHHHH");  //prints "Do you have data? You'll love Firebase."
+            }
+            @Override public void onCancelled(FirebaseError error) { }
+    });
     }//End of facebookClicked method
 }//End of MainActivity class
