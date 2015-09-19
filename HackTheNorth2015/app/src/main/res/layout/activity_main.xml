@@ -23,7 +23,8 @@
         android:layout_height="wrap_content"
         android:text="Google"
         android:id="@+id/GButton"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:onClick="googleClicked" />
 
     <Button
         android:layout_width="match_parent"
@@ -31,13 +32,15 @@
         android:text="Twitter"
         android:id="@+id/TButton"
         android:layout_weight="1"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:onClick="twitterClicked" />
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Facebook"
         android:id="@+id/FButton"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:onClick="facebookClicked" />
 
 </LinearLayout>
