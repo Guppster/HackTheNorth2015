@@ -29,4 +29,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.firebase:firebase-client-android:2.3.1'
+    compile files('src/main/java/com/example/singh/hackthenorth2015/jfugue-5.0.4.jar')
 }
