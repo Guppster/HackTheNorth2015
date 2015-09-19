@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.firebase.client.AuthData;
@@ -16,13 +17,11 @@ import java.util.Map;
 
 import org.jfugue.player.Player;
 import org.jfugue.pattern.Pattern;
-import org.jfugue.theory.Chord;
-import org.jfugue.theory.ChordProgression;
-import org.jfugue.theory.Note;
 
 public class MainActivity extends ActionBarActivity
 {
     Firebase ref;
+    EditText edittext = (EditText) findViewById(R.id.editText);
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -47,6 +46,11 @@ public class MainActivity extends ActionBarActivity
                 // there was an error
             }
         });
+    }
+
+    public void music(View v)
+    {
+        fugueConverter(edittext.toString());
     }
 
     public void fugueConverter(String input) {
