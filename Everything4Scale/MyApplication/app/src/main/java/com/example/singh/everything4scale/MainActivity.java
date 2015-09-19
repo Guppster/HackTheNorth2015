@@ -58,15 +58,14 @@ public class MainActivity extends ActionBarActivity
         {
             case 0:
                 objFragment = new menu1_Fragment();
-                //txt = (TextView) objFragment.getActivity().findViewById(R.id.txt);
                 break;
             case 1:
                 objFragment = new menu2_Fragment();
-                //txt = (TextView) objFragment.getActivity().findViewById(R.id.txt);
+                txt = (TextView) objFragment.getActivity().findViewById(R.id.txt);
                 break;
             case 2:
                 objFragment = new menu3_Fragment();
-                //txt = (TextView) objFragment.getActivity().findViewById(R.id.txt);
+                txt = (TextView) objFragment.getActivity().findViewById(R.id.txt);
                 break;
         }
 
