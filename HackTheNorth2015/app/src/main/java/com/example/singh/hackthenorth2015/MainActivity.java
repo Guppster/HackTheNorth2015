@@ -31,17 +31,8 @@ public class MainActivity extends ActionBarActivity
         ref.child("text").push().setValue("TWITTER BUTTON TOTALLY WORKS");
     }//End of twitterClicked method
 
-    public void facebookClicked(View v)
+    public void githubClicked(View v)
     {
-        ref.child("text").push().setValue("FACEBOOK BUTTON TOTALLY WORKS");
-        ref.child("message").addValueEventListener(new ValueEventListener()
-        {
-            @Override
-            public void onDataChange(DataSnapshot snapshot)
-            {
-                System.out.println("WOAHHHHH");  //prints "Do you have data? You'll love Firebase."
-            }
-            @Override public void onCancelled(FirebaseError error) { }
-    });
+        ref.child("text").push().setValue("Github BUTTON TOTALLY WORKS");
     }//End of facebookClicked method
 }//End of MainActivity class

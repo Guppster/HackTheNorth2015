@@ -38,9 +38,9 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Facebook"
-        android:id="@+id/FButton"
+        android:text="Github"
+        android:id="@+id/GIButton"
         android:layout_weight="1"
-        android:onClick="facebookClicked" />
+        android:onClick="githubClicked" />
 
 </LinearLayout>
