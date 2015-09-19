@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.TextView;
 
 import com.firebase.client.Firebase;
 
@@ -23,6 +24,7 @@ public class MainActivity extends ActionBarActivity
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private Firebase ref;
+    private TextView txt;
 
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
@@ -39,7 +41,7 @@ public class MainActivity extends ActionBarActivity
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
-        mTitle = getTitle();   
+        mTitle = getTitle();
 
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
@@ -52,15 +54,19 @@ public class MainActivity extends ActionBarActivity
     {
         android.support.v4.app.Fragment objFragment = null;
 
-        switch (position) {
+        switch (position)
+        {
             case 0:
                 objFragment = new menu1_Fragment();
+                //txt = (TextView) objFragment.getActivity().findViewById(R.id.txt);
                 break;
             case 1:
                 objFragment = new menu2_Fragment();
+                //txt = (TextView) objFragment.getActivity().findViewById(R.id.txt);
                 break;
             case 2:
                 objFragment = new menu3_Fragment();
+                //txt = (TextView) objFragment.getActivity().findViewById(R.id.txt);
                 break;
         }
 
