@@ -34,9 +34,10 @@ public class MainActivity extends ActionBarActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+        setContentView(R.layout.activity_main);
         Firebase.setAndroidContext(this);
+
         ref = new Firebase("https://crackling-inferno-1738.firebaseio.com/");
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
@@ -54,20 +55,21 @@ public class MainActivity extends ActionBarActivity
     {
         android.support.v4.app.Fragment objFragment = null;
 
-        switch (position)
-        {
+        switch (position) {
             case 0:
                 objFragment = new menu1_Fragment();
+                //txt = (TextView)objFragment.getActivity().findViewById(R.id.txt);
                 break;
             case 1:
                 objFragment = new menu2_Fragment();
-                txt = (TextView) objFragment.getActivity().findViewById(R.id.txt);
+                //txt = (TextView)objFragment.getActivity().findViewById(R.id.txt);
                 break;
             case 2:
                 objFragment = new menu3_Fragment();
-                txt = (TextView) objFragment.getActivity().findViewById(R.id.txt);
+                //txt = (TextView)objFragment.getActivity().findViewById(R.id.txt);
                 break;
         }
+
 
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
